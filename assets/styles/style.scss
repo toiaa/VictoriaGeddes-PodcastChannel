@@ -1,0 +1,242 @@
+@import "variables";
+@import "mixin";
+html {
+    scroll-behavior: smooth;
+}
+*{  
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0;
+    margin: 0;
+    outline:0;
+    margin:0;
+    font-size: 14px;
+    transition: all .5s ease-out;
+}
+li,
+a{
+	list-style: none;
+	text-decoration:none;
+    @include stop-blue();
+}
+h1, h1 span, 
+h2,
+h3{
+	font-family: 'IBM Plex Sans';
+	font-size: 36px;
+	letter-spacing: 0;
+	line-height: 42px;
+	font-weight: 400;
+	font-size: 36px;
+    color: $font_color;
+    height: 84px;
+}
+.parent-grid{
+    display: grid;
+}
+.parent-flex{
+    display: flex;
+}
+/*HEADER Y NAV*/
+.stick{
+    background-color: $font_color;
+	display: block;
+    height: 2px;
+    width: 18px;
+    margin-right: 16px;
+    position: relative;
+	transition: background 0.2s ease-out;
+}
+.stick::before{
+    @include stick-cross();
+    top: 5px;
+}
+.stick::after{
+    @include stick-cross();
+    top: -5px;
+}
+.nav-bar img{
+    margin: 10px 0 10px 16px;
+    float: left;
+    display: block;
+}
+.nav-bar label{
+    float: right;
+    display: block;
+    margin: 20px 0 10px 16px;
+}
+.menubtn{
+    display:none;
+}
+.menubtn:checked ~ .menu{
+    height: 224px;
+}
+.menubtn:checked ~ .menu-icon .stick{
+	background-color: transparent;
+}
+.menubtn:checked ~ .menu-icon .stick::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+.menubtn:checked ~ .menu-icon .stick::after{
+	transform: rotate(45deg);
+	top: 0;
+}
+.menu a{
+    color: $font_light;
+    clear: right;
+    display: block;
+    padding: 16px 0 24px 16px;
+    text-transform: uppercase;
+}
+.menu{
+    background-color: $menu_background;
+    height: 0;
+    width: 100%;
+    flex-direction: column;
+}
+/*BODY*/
+.section-first{
+    width: 100%;
+    margin-bottom: 24px;
+}
+.hello-section{
+    flex-flow:column nowrap;
+    width: 100%;
+}
+.world{
+	text-decoration: line-through;
+}
+h1{ 
+    margin: 29px 0 16px 16px;
+    font-family: 'IBM Plex Sans';
+}
+.subtitle2 {
+    display: none;
+}
+.subtitle{
+    margin: 0 0 36px 16px;
+}
+.conoce{
+    @include button-mobile();
+    color: $font_color;
+}
+.play-podcasts{
+    background: linear-gradient(225deg,#0000FF,#0000A3);
+    clip-path: polygon(0% 3%,100% 0%, 100% 97%, 0% 100%);
+    height: 1263.5px;
+}
+h2{
+    margin: 64px 0 19px 16px;
+    color: $font_light;
+    display: inline-block;
+    height: 42px;
+}
+iframe{
+    padding: 0;
+    margin: 5.5px 11px;
+	width: 93%;
+	height: 232px;
+	border: 0px;
+}
+.iphone img{
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	margin-top: -105px;
+	position: relative;
+	padding: 0 16px;
+}
+h3{
+    margin: 27px 0 8px 0;
+    padding-left: 16px;
+    width: 100%;
+}
+.us{
+    margin-bottom: 54px;
+}
+.where div p {
+    margin: 0 16px;
+}
+.guests{
+    flex-flow: column nowrap;
+    width: 100%;
+}
+.guests h3{
+    margin-bottom: 15px;
+}
+.guests img{
+    width: 100%;
+    height: 243px;
+}
+.themes{
+    width: 100%;
+}
+.themes, .themes div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'IBM Plex Sans';
+    font-weight: 600;
+}
+.themes div{
+    margin-top: 10px;
+}
+.themes div img{
+    margin: 22px 0;
+}
+.themes div p{
+    font-size: 24px;
+    text-align: center;
+}
+.text-files{
+    margin-bottom: 14px;
+}
+.text-head,.text-pc{
+    margin-bottom: 31px;
+}
+.text-virus{
+    margin-bottom: 42px;
+}
+.news-poly{
+    clip-path: polygon(0% 13%,100% 0%, 100% 100%, 0% 100%);
+    height: 341px;
+    width: 100%;
+    background-image: linear-gradient(225deg, $gradient_light 0%, $gradient_dark 100%);;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+.news-poly h3 {
+    color: $font_light;
+}
+.news-poly div{
+    @include button-mobile;
+}
+footer{
+	font-size: 14px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    text-decoration: none;
+    padding: 16px 0 31px 0;
+}
+.social-media-links{
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    height: 22px;
+    list-style: none;
+}
+.social-media-links a{
+    color: $font_color;
+	height: 16px;
+	width: 48px;
+}
+@media screen and (min-width: 520px){
+    
+}

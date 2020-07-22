@@ -1,0 +1,43 @@
+@import "variables";
+
+@mixin stop-blue {
+    -webkit-tap-highlight-color: transparent;    
+}
+
+@mixin stick-cross{
+    background: $font_color;
+	content: "";
+	display: block;
+	height: 100%;
+    width: 100%;
+    margin-right: 16px;
+	position: absolute;
+    transition:all .2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+@mixin cross-rotate-right{
+    transform: rotate(-45deg);
+    top: 0;
+}
+@mixin cross-rotate-left {
+    transform: rotate(45deg);
+	top: 0;
+}
+@mixin gradient-podcast{
+    background-image: linear-gradient(225deg, $gradient_light 0%, $gradient_dark 100%);
+}
+@mixin button-mobile {
+    background-color: $button_color;
+    justify-content: center;
+    align-items: center;
+    align-self:center;
+    width: 288px;
+    height: 48px;
+    font-family: 'IBM plex Sans';
+    font-weight: 600;
+    text-transform: uppercase;
+    &:hover{
+        background-image: linear-gradient(-90deg, $gradient_light 0%, $button_color 100%);
+
+    }
+}
