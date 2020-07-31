@@ -38,6 +38,8 @@
     text-transform: uppercase;
     &:hover{
         background-image: linear-gradient(225deg, $gradient_light 0%, $button_color 100%);
-
+         a{
+        color: $font_light;
+    }
     }
 }
