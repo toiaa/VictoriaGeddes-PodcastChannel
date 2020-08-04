@@ -13,6 +13,7 @@ html {
 
 li,
 a {
+  color: inherit;
   list-style: none;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
@@ -128,6 +129,8 @@ h1 {
 
 .conoce {
   background-color: #00F3BB;
+  cursor: pointer;
+  color: #060A24;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -239,6 +242,8 @@ h3 {
 
 .news-poly div {
   background-color: #00F3BB;
+  cursor: pointer;
+  color: #060A24;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -347,7 +352,7 @@ footer {
       color: #00F3BB; }
     .menu a:active {
       text-decoration: line-through;
-      color: #00F3BB; }
+      color: rgba(6, 10, 36, 0.56); }
 
   .nav-bar {
     display: flex;
@@ -356,9 +361,8 @@ footer {
     margin: 0 16px; }
 
   h1, h1 span {
-    height: 64px;
     font-size: 64px;
-    margin: 0; }
+    margin: 0 0 10px 0; }
 
   .nav-bar {
     margin-right: 100px; }
@@ -398,7 +402,7 @@ footer {
       flex-flow: row wrap;
       align-items: center; }
       .play-podcasts .polygon iframe {
-        width: 584px;
+        width: 424px;
         margin: 0 52px 52px 0; }
       .play-podcasts .polygon :nth-child(even) {
         margin-right: 0; }
@@ -425,8 +429,8 @@ footer {
     .themes div {
       width: 220px;
       margin: 0 65px 0 0; }
-      .themes div :last-child {
-        margin-left: 0; }
+    .themes :last-child {
+      margin-right: 0; }
 
   .news-poly {
     clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
@@ -442,9 +446,12 @@ footer {
     justify-content: space-between;
     padding: 0 100px; }
     footer p {
-      font-size: 17px; }
+      font-size: 16px; }
     footer p, footer div a i {
       font-size: 18px; } }
+@media screen and (min-width: 1250px) {
+  .play-podcasts .polygon iframe {
+    width: 524px; } }
 @media screen and (min-width: 1870px) {
   .play-podcasts :first-child {
     margin-left: 182px; }

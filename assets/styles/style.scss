@@ -327,9 +327,8 @@ footer{
         margin: 0 16px;
     }
     h1, h1 span{
-        height: 64px;
         font-size: 64px;
-        margin: 0;
+        margin: 0 0 10px 0;
     }
     .nav-bar{
         margin-right: 100px;
@@ -371,7 +370,7 @@ footer{
             flex-flow: row wrap;
             align-items: center;
                 iframe{
-                    width: 584px;
+                    width: 424px;
                     margin: 0 52px 52px 0;
                 }
                 :nth-child(even){
@@ -401,10 +400,10 @@ footer{
         justify-content: center;
         div{
             width: 220px;
-            margin: 0 65px 0 0;
-            :last-child{
-                margin-left: 0;
-            }
+            margin: 0 65px 0 0;   
+        }
+        :last-child{
+            margin-right: 0;
         }
     }
     .news-poly{
@@ -422,14 +421,20 @@ footer{
         justify-content: space-between;
         padding: 0 100px;
             p{
-                font-size: 17px;
+                font-size: 16px;
             }
             p, div a i{
                 font-size: 18px;
             }
     }
 }
-
+@media screen and (min-width: 1250px){
+    .play-podcasts .polygon{
+        iframe{
+            width: 524px;
+        }
+    }
+}
 @media screen and (min-width: 1870px){
     .play-podcasts :first-child{
         margin-left:182px;
